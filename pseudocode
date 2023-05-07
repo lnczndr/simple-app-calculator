@@ -5,8 +5,13 @@
 #ASSIGNMENT #5: SIMPLE APP CALCULATOR
 
 # Ask what operation to use (Add,Subtract, Multiply, Divide)
+
 # Ask for input 1
+
 # Ask for input 2
+
 # Show output
+
 # Ask if the user wants to try again.
+
 # If no, Display “Thank you!” and the program will exit
