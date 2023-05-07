@@ -1,0 +1,21 @@
+#LANA CAZANDRA U. LEGASPI - BSCPE 1-5
+
+#SIMPLE APP CALCULATOR
+
+#ASSIGNMENT #5: SIMPLE APP CALCULATOR
+
+def simple_calc():
+
+# Ask for input 1
+    inp_num1 = float(input("Enter first number: "))
+
+# Ask for input 2
+    inp_num2 = float(input("Enter second number: "))
+                         
+# Ask what operation to use (Add,Subtract, Multiply, Divide)
+
+# Show output
+
+# Ask if the user wants to try again.
+
+# If no, Display “Thank you!” and the program will exit
