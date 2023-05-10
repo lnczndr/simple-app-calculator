@@ -30,17 +30,17 @@ while repeat_prog == "y":
 
         #Adding except function for possible Errors
     except ValueError:
-        final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+        final_answer = ("ERROR! YOU CAN ONLY ENTER AN INTEGER/DECIMAL.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
     
     except ZeroDivisionError:
-        final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+        final_answer = ("ERROR! YOU CAN'T DIVIDE A NUMBER BY ZERO.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
         
     except ArithmeticError:
         final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
 
     # Show output
     finally:
-        print ("\n= ", final_answer)
+        print ("\n= ", (final_answer))
 
         # Ask if the user wants to try again.
     print ("\nNOTE: If you wanted to run the program again, strictly answer 'y' in lowercase. Failure to do so will end the program.\n")
@@ -48,4 +48,4 @@ while repeat_prog == "y":
 
     # If no, Display “Thank you!” and the program will exit
     if repeat_prog == "n":
-        print ("\nTHANK YOU!")
+        print ("\nTHANK YOU!\n")
