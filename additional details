@@ -41,11 +41,11 @@ while repeat_prog == "y":
         elif operation == "/":
             final_answer = inp_num1/inp_num2
         else:
-            print ("INVALID OPERATION")
+            final_answer = ("INVALID OPERATION")
 
         #Adding except function for possible Errors
     except ValueError:
-        final_answer = ("ERROR! YOU CAN ONLY ENTER AN INTEGER/DECIMAL.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+        final_answer = ("ERROR! YOU NEED TO ENTER AN INTEGER/DECIMAL.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
     
     except ZeroDivisionError:
         final_answer = ("ERROR! YOU CAN'T DIVIDE A NUMBER BY ZERO.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
@@ -55,13 +55,12 @@ while repeat_prog == "y":
 
     # Show output
     finally:
-        time.sleep(2)
+        time.sleep(1)
         print (Fore.LIGHTRED_EX + "\n▒▒▒▒▒▒▒▒▒▒ 0%" + Style.RESET_ALL)
-        time.sleep (2)
         print (Fore.LIGHTRED_EX + "\n██▒▒▒▒▒▒▒▒ 20%" + Style.RESET_ALL)
         time.sleep (1)
         print (Fore.LIGHTRED_EX + "\n████▒▒▒▒▒▒ 40%" + Style.RESET_ALL)
-        time.sleep (2)
+        time.sleep (1)
         print (Fore.LIGHTRED_EX + "\n██████▒▒▒▒ 60%" + Style.RESET_ALL)
         time.sleep (1)
         print (Fore.LIGHTRED_EX + "\n████████▒▒ 80%" + Style.RESET_ALL)
