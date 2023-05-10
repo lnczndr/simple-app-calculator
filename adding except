@@ -1,0 +1,51 @@
+#LANA CAZANDRA U. LEGASPI - BSCPE 1-5
+
+#SIMPLE APP CALCULATOR
+
+#ASSIGNMENT #5: SIMPLE APP CALCULATOR
+
+repeat_prog = "y"
+while repeat_prog == "y":
+
+    # Ask for input 1
+    try:
+        inp_num1 = float(input("\nEnter first number: "))
+
+        # Ask for input 2
+        inp_num2 = float(input("\nEnter second number: "))
+              
+        # Ask what operation to use (Add,Subtract, Multiply, Divide)
+        operation = input("\nEnter operation you want to use (+, -, *, /): ")
+
+        if operation == "+":
+            final_answer = inp_num1 + inp_num2
+        elif operation == "-":
+            final_answer = inp_num1 - inp_num2
+        elif operation == "*":
+            final_answer = inp_num1 * inp_num2
+        elif operation == "/":
+            final_answer = inp_num1/inp_num2
+        else:
+            print ("INVALID OPERATION")
+
+        #Adding except function for possible Errors
+    except ValueError:
+        final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+    
+    except ZeroDivisionError:
+        final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+        
+    except ArithmeticError:
+        final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+
+    # Show output
+    finally:
+        print ("\n= ", final_answer)
+
+        # Ask if the user wants to try again.
+    print ("\nNOTE: If you wanted to run the program again, strictly answer 'y' in lowercase. Failure to do so will end the program.\n")
+    repeat_prog = str(input("Would you like to run the program again?(y/n): "))
+
+    # If no, Display “Thank you!” and the program will exit
+    if repeat_prog == "n":
+        print ("\nTHANK YOU!")
