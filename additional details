@@ -1,0 +1,85 @@
+#LANA CAZANDRA U. LEGASPI - BSCPE 1-5
+
+#SIMPLE APP CALCULATOR
+
+#ASSIGNMENT #5: SIMPLE APP CALCULATOR
+import pyfiglet
+
+ascii_banner = pyfiglet.figlet_format("SIMPLE CALCULATOR")
+
+print (ascii_banner)
+
+from colorama import init, Fore, Back, Style
+init()
+import time
+
+repeat_prog = "y"
+while repeat_prog == "y":
+
+    print (Fore.MAGENTA + "=" *150, "\n" + Style.RESET_ALL)
+                
+    username = input("\nEnter username: ")
+
+    print (Fore.GREEN + "\nWelcome to the Simple Calculator User", username, "!" + Style.RESET_ALL)
+
+    # Ask for input 1
+    try:
+        inp_num1 = float(input(Fore.LIGHTCYAN_EX + "\nEnter first number: " + Style.RESET_ALL))
+
+        # Ask for input 2
+        inp_num2 = float(input(Fore.LIGHTCYAN_EX + "\nEnter second number: " + Style.RESET_ALL))
+              
+        # Ask what operation to use (Add,Subtract, Multiply, Divide)
+        operation = input(Fore.LIGHTYELLOW_EX + "\nEnter operation you want to use (+, -, *, /): " + Style.RESET_ALL)
+
+        if operation == "+":
+            final_answer = inp_num1 + inp_num2
+        elif operation == "-":
+            final_answer = inp_num1 - inp_num2
+        elif operation == "*":
+            final_answer = inp_num1 * inp_num2
+        elif operation == "/":
+            final_answer = inp_num1/inp_num2
+        else:
+            print ("INVALID OPERATION")
+
+        #Adding except function for possible Errors
+    except ValueError:
+        final_answer = ("ERROR! YOU CAN ONLY ENTER AN INTEGER/DECIMAL.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+    
+    except ZeroDivisionError:
+        final_answer = ("ERROR! YOU CAN'T DIVIDE A NUMBER BY ZERO.\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+        
+    except ArithmeticError:
+        final_answer = ("An ERROR has occured!\n\nRESTART THE PROGRAM AND TRY AGAIN.")
+
+    # Show output
+    finally:
+        time.sleep(2)
+        print (Fore.LIGHTRED_EX + "\n▒▒▒▒▒▒▒▒▒▒ 0%" + Style.RESET_ALL)
+        time.sleep (2)
+        print (Fore.LIGHTRED_EX + "\n██▒▒▒▒▒▒▒▒ 20%" + Style.RESET_ALL)
+        time.sleep (1)
+        print (Fore.LIGHTRED_EX + "\n████▒▒▒▒▒▒ 40%" + Style.RESET_ALL)
+        time.sleep (2)
+        print (Fore.LIGHTRED_EX + "\n██████▒▒▒▒ 60%" + Style.RESET_ALL)
+        time.sleep (1)
+        print (Fore.LIGHTRED_EX + "\n████████▒▒ 80%" + Style.RESET_ALL)
+        time.sleep (2)
+        print (Fore.LIGHTRED_EX + "\n██████████ 100%" + Style.RESET_ALL)
+
+        time.sleep (2)
+        print (Fore.YELLOW + "\n𝐍𝐨𝐰 𝐥𝐨𝐚𝐝𝐢𝐧𝐠. . .\n" + Style.RESET_ALL)
+
+        time.sleep (3)
+        print ("\n= ", (final_answer))
+
+        # Ask if the user wants to try again.
+
+    print (Fore.RED + "\nNOTE: If you wanted to run the program again, strictly answer 'y' in lowercase. Failure to do so will end the program.\n" + Style.RESET_ALL)
+    
+    repeat_prog = str(input("Would you like to run the program again?(y/n): "))
+
+    # If no, Display “Thank you!” and the program will exit
+    if repeat_prog == "n":
+        print ("\nTHANK YOU!\n")
